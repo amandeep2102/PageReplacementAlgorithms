@@ -1,5 +1,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
+#include <cctype>
+#include <cstdlib>
 using namespace std;
 
 class FIFO{
@@ -88,8 +90,25 @@ public:
 
 };
 
-int main()
+int main(int argc, char** argv)
 {
+    // char* arg1 = "5";
+    // char* arg2 = "3";
+    // if (argc>=1){
+    //     arg1 = argv[1];
+    //     arg2 = argv[2];
+    // }
+    // FIFO f;
+    // srand(0);
+    // vector<int> s;
+    // int n = stoi(arg1);
+    // cout<< "arg1 " << arg1 << " arg2 " << arg2 << endl;
+
+    // for (int i = 0; i < stoi(arg2); i++)
+    // {
+    //     s.push_back(rand()%10);
+    // }
+    // f.fifo(s, n);
     FIFO f;
     srand(0);
     vector<int> s;
