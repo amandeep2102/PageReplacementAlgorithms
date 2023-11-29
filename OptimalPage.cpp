@@ -27,7 +27,7 @@ public:
         {
             if (search(s[i], fr)){
                 hit++;
-                cout<< "\n-----------------Page Hit-----------------------"<<endl<<endl;
+                cout<< "\n-----------------Page Hit--------------------"<<endl<<endl;
                 continue;
             }
         
@@ -66,15 +66,18 @@ public:
 
 int main() {
     OptimalPageRep op;
-    srand(0);
+    long long int stringsize = 50;
+    long long int framesize = 3;
+
+    srand(time(0));
     vector<long long int> index;
-    for (int i = 0; i < 30; i++)
+    for (int i = 0; i < stringsize; i++)
     {
         index.push_back(rand()%10);
-        cout << index[i] << " ";
+        // cout << index[i] << " ";
     }
+
     cout<< endl;
-    long long int n = 3;
-    op.optimal(index, n);
+    op.optimal(index, framesize);
     return 0;
 }
