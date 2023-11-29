@@ -27,7 +27,7 @@ public:
         {
             if (search(s[i], fr)){
                 hit++;
-                cout<< "\npage hit"<<endl<<endl;
+                cout<< "\n-----------------Page Hit-----------------------"<<endl<<endl;
                 continue;
             }
         
@@ -54,11 +54,11 @@ public:
                 cout<< fr[k] << " " << "fr" << endl;
             }
             cout << endl;
-            cout << "next frame" << endl;
+            cout << "--------------Next Frame--------------" << endl;
         }
 
-        cout << "page hit " << hit << endl;
-        cout << "page fault " << s.size() - hit << endl;
+        cout << "Page Hits -> " << hit << endl;
+        cout << "Page Faults -> " << s.size() - hit << endl;
     }
 
 };
