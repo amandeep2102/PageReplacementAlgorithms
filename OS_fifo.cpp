@@ -32,11 +32,11 @@ class FIFO{
             }
             if (traverse->Data != value)
             {
-                delAtfront(head);
                 struct Node *tmp = (struct Node *)malloc(sizeof(struct Node));
                 tmp->Data = value;
                 tmp->next = NULL;
                 traverse->next = tmp;
+                delAtfront(head);
                 pagefaults++;
             }
         }
