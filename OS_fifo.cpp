@@ -100,40 +100,25 @@ public:
 
 int main(int argc, char** argv)
 {
-    // char* arg1 = "5";
-    // char* arg2 = "3";
-    // if (argc>=1){
-    //     arg1 = argv[1];
-    //     arg2 = argv[2];
-    // }
-    // FIFO f;
-    // srand(0);
-    // vector<int> s;
-    // int n = stoi(arg1);
-    // cout<< "arg1 " << arg1 << " arg2 " << arg2 << endl;
-
-    // for (int i = 0; i < stoi(arg2); i++)
-    // {
-    //     s.push_back(rand()%10);
-    // }
-    // f.fifo(s, n);
     FIFO f;
     srand(time(0));
-    vector<int> s;
-    int n=10;
-
-    for (int i = 0; i < 1000; i++)
+    vector<int> RefString;
+    int FrameNum=10;
+    cout << "Refrence String: ";
+    for (int i = 0; i < 15; i++)
     {
-        s.push_back(rand()%100);
+        RefString.push_back(rand()%10);
+        cout << RefString[i] << " ";
     }
+    cout << "\nFrame size: " << FrameNum << endl;
 
-    for (int i = 1; i <= 100; i=i+4)
-    {
-        cout << f.fifo(s, i) << " " << i << endl;
-        f.pagefaults = 0;
-        f.size = 0;
-    }
+    // for (int i = 1; i <= 100; i=i+4)
+    // {
+    //     cout << f.fifo(s, i) << " " << i << endl;
+    //     f.pagefaults = 0;
+    //     f.size = 0;
+    // }
     
-    // cout << f.fifo(s, n) << endl;
+    cout << "Page Faults: " << f.fifo(RefString, FrameNum) << endl;
     
 }

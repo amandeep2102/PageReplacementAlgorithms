@@ -68,21 +68,25 @@ public:
 
 int main() {
     OptimalPageRep op;
-    long long int stringsize = 500;
-    long long int framesize = 100;
+    long long int stringsize = 15;
+    long long int framesize = 10;
 
     srand(time(0));
     vector<long long int> refstring;
+    cout<< "Reference String: ";
 
     for (int i = 0; i < stringsize; i++)
     {
-        refstring.push_back(rand()%100);
-        // cout << index[i] << " ";
+        refstring.push_back(rand()%10);
+        cout << refstring[i] << " ";
     }
+    cout << "\nframesize: " << framesize<< endl;
 
-    for (int i = 5; i <= framesize; i = i+5)
-    {
-        cout << op.optimal(refstring, i) << " " <<  i << endl;
-    }
+    // for (int i = 5; i <= framesize; i = i+5)
+    // {
+    //     cout << op.optimal(refstring, i) << " " <<  i << endl;
+    // }
+
+    cout << "Page Faults: " << op.optimal(refstring, framesize) << endl;
     return 0;
 }
